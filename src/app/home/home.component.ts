@@ -7,4 +7,11 @@ import { Router } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
-export class HomeComponent {}
+export class HomeComponent {
+  constructor(private router: Router) {}
+
+  redirectPage() {
+    this.router.navigate(['/student']);
+  }
+  title = 'SummerCamp';
+}
